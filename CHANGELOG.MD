@@ -10,10 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 -   Prefabs de los elementos (2025-08-26).
+-   Colisiones con paredes y mover escenario (2025-08-26).
 
 ### Fixed
 
 ### Changed
+
+-   Trigger para el prefab de Scenario (2025-08-26).
 
 ### Removed
 
