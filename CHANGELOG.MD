@@ -1,3 +1,32 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [0.0.1] - 2025-08-26
+
+### Added
+
+-   Prefabs de los elementos (2025-08-26).
+-   Colisiones con paredes y mover escenario (2025-08-26).
+-   Modelo de la clase Scenario con sus atributos (2025-08-26).
+-   Escenario deslizante (2025-08-26).
+
+### Fixed
+
+### Changed
+
+-   Trigger para el prefab de Scenario (2025-08-26).
+-   Spawpoint en el prefab de Scenario (2025-08-26).
+-   Caracteristicas de los prefabs (2025-08-26).
+-   Rigidbody2D y box collider a la pared superior (2025-05-26).
+
+### Removed
+
+-   Rigidbody2D y box collider a la pared inferior (2025-05-26).
+
 ## [0.0.0] - 2025-08-26
 
 ### Added
