@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
--   (2025-08-26).
+-   Script para mover una bala adelante y desaparece si choca (2025-08-26).
 
 ### Fixed
 
@@ -19,6 +19,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Velocidad del escenario reducida (2025-08-26).
 
 ### Removed
+
+-   Archivo ScenarioCollider debido a que no estaba en uso (2025-08-26).
 
 ## [0.1.0] - 2025-08-26
 
