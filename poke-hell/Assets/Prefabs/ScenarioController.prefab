@@ -30,8 +30,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8869404343653436166}
-  - {fileID: 8914775937001996048}
+  - {fileID: 1804177899460033952}
+  - {fileID: 6779829950897500478}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &-5764794865860916772
@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e49a8c44b6f8cf445ba577891d0453c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScenarioController
-  speed: 10
---- !u!1001 &8234825934777715410
+  scenarioObject: {fileID: 4755836431498356537, guid: 28b996b40dbdf3c478abd404ee9bcd75, type: 3}
+--- !u!1001 &1177749514223647860
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -104,12 +104,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28b996b40dbdf3c478abd404ee9bcd75, type: 3}
---- !u!4 &8869404343653436166 stripped
+--- !u!4 &1804177899460033952 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 671474830261649876, guid: 28b996b40dbdf3c478abd404ee9bcd75, type: 3}
-  m_PrefabInstance: {fileID: 8234825934777715410}
+  m_PrefabInstance: {fileID: 1177749514223647860}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &8279353032570355396
+--- !u!1001 &6289071991321276650
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -166,8 +166,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28b996b40dbdf3c478abd404ee9bcd75, type: 3}
---- !u!4 &8914775937001996048 stripped
+--- !u!4 &6779829950897500478 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 671474830261649876, guid: 28b996b40dbdf3c478abd404ee9bcd75, type: 3}
-  m_PrefabInstance: {fileID: 8279353032570355396}
+  m_PrefabInstance: {fileID: 6289071991321276650}
   m_PrefabAsset: {fileID: 0}

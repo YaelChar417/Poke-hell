@@ -20,7 +20,7 @@ public class ColliderController : MonoBehaviour
     {
         if (collision.tag == "ScenarioTrigger")
         {
-            Debug.Log("Action");
+            ScenarioController.singleton.SpawnScene();
         }
     }
 }
