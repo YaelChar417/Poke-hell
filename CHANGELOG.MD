@@ -9,16 +9,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
--   (2025-08-26).
+-   Script para mover una bala adelante y desaparece si choca (2025-08-26).
+-   Constante para la velocidad de las balas (2025-08-26).
+-   Enemigo lanzando fuego por tiempo (2025-08-27).
 
 ### Fixed
+
+-   Las balas no se mueven con el enemigo sino que siguen su propia trayectoria (2025-08-26).
 
 ### Changed
 
 -   Objeto de colisiones por todos los muros (2025-08-26).
 -   Velocidad del escenario reducida (2025-08-26).
+-   Lanzar chorros de balas y ajustar velocidad y cantidad de chorros (2025-08-26).
 
 ### Removed
+
+-   Archivo ScenarioCollider debido a que no estaba en uso (2025-08-26).
 
 ## [0.1.0] - 2025-08-26
 

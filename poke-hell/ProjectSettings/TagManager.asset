@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - ScenarioTrigger
+  - BulletTrigger
   layers:
   - Default
   - TransparentFX
