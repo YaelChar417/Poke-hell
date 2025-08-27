@@ -462,14 +462,6 @@ PrefabInstance:
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7857033505590066259, guid: 5c7b61930793ceb42a5a6a6f381115a8, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7857033505590066259, guid: 5c7b61930793ceb42a5a6a6f381115a8, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7857033505590066259, guid: 5c7b61930793ceb42a5a6a6f381115a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.8
       objectReference: {fileID: 0}
@@ -757,9 +749,13 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: -0.012854099
       objectReference: {fileID: 0}
+    - target: {fileID: 3021057670285316190, guid: 4f8e85996a451704f925fed33b16cd6d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.11
+      objectReference: {fileID: 0}
     - target: {fileID: 4798327756485070804, guid: 4f8e85996a451704f925fed33b16cd6d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.78
+      value: 10.52
       objectReference: {fileID: 0}
     - target: {fileID: 5398375152550058394, guid: 4f8e85996a451704f925fed33b16cd6d, type: 3}
       propertyPath: m_Name
@@ -805,6 +801,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6345903834128650131, guid: 4f8e85996a451704f925fed33b16cd6d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.49
+      objectReference: {fileID: 0}
     - target: {fileID: 7691318474506147420, guid: 4f8e85996a451704f925fed33b16cd6d, type: 3}
       propertyPath: m_Size.x
       value: 20.232174
@@ -815,35 +815,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8539811802079033839, guid: 4f8e85996a451704f925fed33b16cd6d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.85
+      value: -10.68
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f8e85996a451704f925fed33b16cd6d, type: 3}
---- !u!1 &2052449212 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1983915458944785330, guid: d71359582c028274eb2ce23e4cedb2c3, type: 3}
-  m_PrefabInstance: {fileID: 8193832066468792132}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2052449213 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2792121244383302141, guid: d71359582c028274eb2ce23e4cedb2c3, type: 3}
   m_PrefabInstance: {fileID: 8193832066468792132}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2052449214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052449212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 293c0f196e7072a47a2d1a1de7671e6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BulletController
 --- !u!1001 &2105916963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -962,21 +945,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8758638318324007157, guid: d71359582c028274eb2ce23e4cedb2c3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 8758638318324007157, guid: d71359582c028274eb2ce23e4cedb2c3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.54
+    - target: {fileID: 7789186012610301960, guid: d71359582c028274eb2ce23e4cedb2c3, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1983915458944785330, guid: d71359582c028274eb2ce23e4cedb2c3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2052449214}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d71359582c028274eb2ce23e4cedb2c3, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

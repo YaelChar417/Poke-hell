@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 -   Script para mover una bala adelante y desaparece si choca (2025-08-26).
+-   Constante para la velocidad de las balas (2025-08-26).
+-   Enemigo lanzando fuego por tiempo (2025-08-27).
 
 ### Fixed
 
