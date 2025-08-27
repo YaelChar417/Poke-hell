@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+-   Las balas no se mueven con el enemigo sino que siguen su propia trayectoria (2025-08-26).
+
 ### Changed
 
 -   Objeto de colisiones por todos los muros (2025-08-26).
