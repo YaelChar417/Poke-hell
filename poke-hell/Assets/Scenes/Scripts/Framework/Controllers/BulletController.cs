@@ -5,6 +5,7 @@ public class BulletController : MonoBehaviour
     private float speed = Constants.BULLET_SPEED;
     private float timeCount;
     private float bulletLife = Constants.BULLET_LIFE;
+    public Vector2 direction = Vector2.down;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +27,6 @@ public class BulletController : MonoBehaviour
 
     void MoveForward()
     {
-        transform.Translate(Vector2.down * Time.deltaTime * speed);
+        transform.Translate(direction.normalized * Time.deltaTime * speed);
     }
 }
