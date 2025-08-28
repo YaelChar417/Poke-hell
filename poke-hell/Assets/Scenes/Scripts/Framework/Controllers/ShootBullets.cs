@@ -116,7 +116,7 @@ public class ShootBullets : MonoBehaviour
     {
         float angleStep = 360.0f / streams;
 
-        for(int i = 0; i <= streams - 1; i++)
+        for(int i = 0; i < streams; i++)
         {
             float currentAngle = i * angleStep + angleOffset;
             float radians = currentAngle * Mathf.Deg2Rad;

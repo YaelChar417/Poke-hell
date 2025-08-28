@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Corrutina del enemyController ahora hecha modular (2025-08-28).
 -   Mayor numero de fuego al 1er patron (2025-08-28).
 -   Estructura de condicionales para mejor legibilidad (2025-08-28).
+-   Condicional del ciclo for para mejor legibilidad (2025-08-28).
 
 ### Removed
 
