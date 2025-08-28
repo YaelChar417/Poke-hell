@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.1] - 2025-08-26
+
+### Added
+
+-   Nuevas imagenes para el contador de balas (2025-08-27).
+-   TextMeshPro para utilizarlo como texto modificable (2025-08-27).
+-   Prefab para contador realizado (2025-08-27).
+-   Archivo para manejar el tiempo y crear futuros eventos (2025-08-27).
+-   Elemento UI para ver el tiempo y debuggear (2025-08-27).
+-   Corrutina para movimiento básico agregado (2025-08-27).
+-   Corrutina para disparar mientras disparas (2025-08-28).
+
+### Fixed
+
+### Changed
+
+### Removed
+
 ## [0.2.0] - 2025-08-26
 
 ### Added
