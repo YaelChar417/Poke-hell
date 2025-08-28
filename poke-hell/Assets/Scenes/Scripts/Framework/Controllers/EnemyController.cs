@@ -17,10 +17,16 @@ public class EnemyController : MonoBehaviour
     {
         if(isTime(10, 2))
         {
+            StartCoroutine(MoveEnemy(4));
+        } else if(isTime(10, 8))
+        {
             StartCoroutine(MoveEnemy(1));
-        } else if(isTime(10, 10))
+        } else if(isTime(10, 14))
         {
             StartCoroutine(MoveEnemy(2));
+        } else if(isTime(10, 20))
+        {
+            StartCoroutine(MoveEnemy(3));
         }
 
         
@@ -29,39 +35,45 @@ public class EnemyController : MonoBehaviour
     private IEnumerator MoveEnemy(int order)
     {
         float timeElapsed = 0;
-        float timeToMove = 3;
+        float timeToMove = 1;
         Vector3 targetPos;
         Vector3 currentPos;
-        
+
         switch(order)
         {
-            case 1:
-                transform.position = new Vector3(-27.5f,3, -10);
-                targetPos = new Vector3(-15.5f,3, -10);
+            case 1: // del centro a la izquierda
+                transform.position = new Vector3(-20.0f, 4.0f, -10);
+                targetPos = new Vector3(-27.5f, 3.0f, -10);
 
                 currentPos = transform.position;
-
-                while(timeElapsed < timeToMove){
-                    transform.position = Vector3.Lerp(currentPos,targetPos,timeElapsed/timeToMove);
-                    timeElapsed += Time.deltaTime;
-                    yield return null;
-                }
                 break;
-            case 2:
-                transform.position = new Vector3(-15.5f,3, -10);
-                targetPos = new Vector3(-27.5f,3, -10);
+            case 2: // de la izquierda al centro
+                transform.position = new Vector3(-27.5f, 3.0f, -10);
+                targetPos = new Vector3(-20.0f, 4.0f, -10);
 
                 currentPos = transform.position;
+                break;
+            case 3: // Del centro a la derecha
+                transform.position = new Vector3(-20.0f, 4.0f, -10);
+                targetPos = new Vector3(-15.5f, 3.0f, -10);
 
-                while(timeElapsed < timeToMove){
-                    transform.position = Vector3.Lerp(currentPos,targetPos,timeElapsed/timeToMove);
-                    timeElapsed += Time.deltaTime;
-                    yield return null;
-                }
+                currentPos = transform.position;
+                break;
+            case 4: // derecha al centro
+                transform.position = new Vector3(-15.5f, 3.0f, -10);
+                targetPos = new Vector3(-20.0f, 4.0f, -10);
+
+                currentPos = transform.position;
                 break;
             default: 
-                yield return null;
-                break;
+                yield break;
+        }
+
+        while(timeElapsed < timeToMove)
+        {
+            transform.position = Vector3.Lerp(currentPos,targetPos,timeElapsed/timeToMove);
+            timeElapsed += Time.deltaTime;
+            yield return null;
         }
     }
 

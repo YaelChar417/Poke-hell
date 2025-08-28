@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+-   Logica de la función MoveEnemy en el controller para reducir lineas de codigo (2025-08-26).
+
 ### Changed
 
 -   Corrutina del enemyController ahora hecha modular (2025-08-28).
