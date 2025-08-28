@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+
 
 public class ShootBullets : MonoBehaviour
 {   
@@ -9,26 +11,41 @@ public class ShootBullets : MonoBehaviour
     public int numberOfStreams = 5;
     public float fireInterval = 0.5f;   
     public float angleOffset = -90.0f;
+    private Coroutine FireCorutine;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void OnEnable()
     {
-        
+        TimeManager.OnMinuteChanged += TimeCheck;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnDisable()
     {
-        timer += Time.deltaTime;
+        TimeManager.OnMinuteChanged -= TimeCheck;
+    }
 
-        if (timer > fireInterval)
+    private void TimeCheck()
+    {
+        if(TimeManager.Hour == 10 && TimeManager.Minute == 2)
         {
-            timer = 0;
-            Fire(numberOfStreams);
+            FireCorutine = StartCoroutine(FireLoop());
+        }
+
+        if(TimeManager.Hour == 10 && TimeManager.Minute == 15)
+        {
+            StopCoroutine(FireCorutine);
         }
     }
 
-    void Fire(int streams)
+    private IEnumerator FireLoop()
+    {
+        while(true)
+        {
+            yield return StartCoroutine(Fire1(numberOfStreams));
+            yield return new WaitForSeconds(fireInterval);
+        }
+    }
+
+    private IEnumerator Fire1(int streams)
     {
         float angleStep = 360.0f / streams;
 
@@ -36,11 +53,11 @@ public class ShootBullets : MonoBehaviour
         {
             float currentAngle = i * angleStep + angleOffset;
             float radians = currentAngle * Mathf.Deg2Rad;
-
             Vector2 direction = new Vector2(Mathf.Cos(radians), Mathf.Sin(radians)).normalized;
 
             BulletController b = Instantiate(bulletObject, offset.position, Quaternion.identity, this.transform);
             b.direction = direction;
+            yield return null;            
         }
     }
 }
