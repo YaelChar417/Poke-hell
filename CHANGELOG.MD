@@ -9,8 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
--   Nuevas imagenes para el contador de balas (2025-08-26).
--   TextMeshPro para utilizarlo como texto modificable (2025-08-26).
+-   Nuevas imagenes para el contador de balas (2025-08-27).
+-   TextMeshPro para utilizarlo como texto modificable (2025-08-27).
+-   Prefab para contador realizado (2025-08-27).
+-   Archivo para manejar el tiempo y crear futuros eventos (2025-08-27).
 
 ### Fixed
 
