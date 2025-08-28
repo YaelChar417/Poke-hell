@@ -8,7 +8,7 @@ public class ShootBullets : MonoBehaviour
     public Transform offset;
     private float timer;
 
-    public int numberOfStreams = 5;
+    private int numberOfStreams;
     private float fireInterval;   
     public float angleOffset = -90.0f;
     private Coroutine FireCorutine;
@@ -55,6 +55,7 @@ public class ShootBullets : MonoBehaviour
     private IEnumerator FireLoop()
     {
         fireInterval = 0.1f;
+        numberOfStreams = 9;
         while(true)
         {
             yield return StartCoroutine(Fire1(numberOfStreams));

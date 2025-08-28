@@ -43,12 +43,12 @@ public class EnemyController : MonoBehaviour
         {
             case 1: // del centro a la izquierda
                 transform.position = new Vector3(-20.0f, 4.0f, -10);
-                targetPos = new Vector3(-27.5f, 3.0f, -10);
+                targetPos = new Vector3(-25.5f, 3.0f, -10);
 
                 currentPos = transform.position;
                 break;
             case 2: // de la izquierda al centro
-                transform.position = new Vector3(-27.5f, 3.0f, -10);
+                transform.position = new Vector3(-25.5f, 3.0f, -10);
                 targetPos = new Vector3(-20.0f, 4.0f, -10);
 
                 currentPos = transform.position;
