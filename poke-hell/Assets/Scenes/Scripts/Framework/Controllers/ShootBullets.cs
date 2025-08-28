@@ -27,40 +27,72 @@ public class ShootBullets : MonoBehaviour
     {
         if(isTime(10, 3))
         {
-            FireCorutine = StartCoroutine(FireLoop());
-        } else if(isTime(10, 6))
+            FireCorutine = StartCoroutine(FireLoop(1));
+        } 
+        else if(isTime(10, 6))
         {
             StopCoroutine(FireCorutine);
-        } else if(isTime(10, 7))
+        } 
+        else if(isTime(10, 7))
         {
-            FireCorutine = StartCoroutine(FireLoop());
-        } else if(isTime(10, 10))
-        {
-            StopCoroutine(FireCorutine);
-        } else if(isTime(10, 11))
-        {
-            FireCorutine = StartCoroutine(FireLoop());
-        } else if(isTime(10, 14))
+            FireCorutine = StartCoroutine(FireLoop(1));
+        } 
+        else if(isTime(10, 10))
         {
             StopCoroutine(FireCorutine);
-        } else if(isTime(10, 15))
+        } 
+        else if(isTime(10, 11))
         {
-            FireCorutine = StartCoroutine(FireLoop());
-        } else if(isTime(10, 18))
+            FireCorutine = StartCoroutine(FireLoop(1));
+        } 
+        else if(isTime(10, 14))
+        {
+            StopCoroutine(FireCorutine);
+        } 
+        else if(isTime(10, 15))
+        {
+            FireCorutine = StartCoroutine(FireLoop(1));
+        } 
+        else if(isTime(10, 18))
+        {
+            StopCoroutine(FireCorutine);
+        } 
+        else if(isTime(10, 20))
+        {
+            FireCorutine = StartCoroutine(FireLoop(2));
+        } 
+        else if(isTime(10, 35))
         {
             StopCoroutine(FireCorutine);
         }
     }
 
-    private IEnumerator FireLoop()
+    private IEnumerator FireLoop(int opcion)
     {
-        fireInterval = 0.1f;
-        numberOfStreams = 9;
-        while(true)
+        switch(opcion)
         {
-            yield return StartCoroutine(Fire1(numberOfStreams));
-            yield return new WaitForSeconds(fireInterval);
+            case 1:
+                fireInterval = 0.1f;
+                numberOfStreams = 9;
+                while(true)
+                {
+                    yield return StartCoroutine(Fire1(numberOfStreams));
+                    yield return new WaitForSeconds(fireInterval);
+                }
+                break;
+            case 2:
+                fireInterval = 0.5f;
+                numberOfStreams = 10;
+                while(true)
+                {
+                    yield return StartCoroutine(Fire2(numberOfStreams));
+                    yield return new WaitForSeconds(fireInterval);
+                }
+                break;
+            default:
+                yield break;
         }
+        
     }
 
     private IEnumerator Fire1(int streams)

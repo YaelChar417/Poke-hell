@@ -15,22 +15,27 @@ public class EnemyController : MonoBehaviour
 
     private void TimeCheck()
     {
-        if(isTime(10, 2))
+        if(isTime(10, 1))
         {
-            StartCoroutine(MoveEnemy(4));
-        } else if(isTime(10, 6))
+            StartCoroutine(MoveEnemy(6));
+        }
+        else if(isTime(10, 6))
         {
             StartCoroutine(MoveEnemy(1));
-        } else if(isTime(10, 10))
+        } 
+        else if(isTime(10, 10))
         {
             StartCoroutine(MoveEnemy(2));
-        } else if(isTime(10, 14))
+        } 
+        else if(isTime(10, 14))
         {
             StartCoroutine(MoveEnemy(3));
-        } else if(isTime(10, 18))
+        } 
+        else if(isTime(10, 18))
         {
             StartCoroutine(MoveEnemy(5));
-        }else if(isTime(10, 20))
+        }
+        else if(isTime(10, 20))
         {
             StartCoroutine(RotateEnemy());
         }
@@ -89,6 +94,12 @@ public class EnemyController : MonoBehaviour
             case 5: // derecha al centro en x, y
                 transform.position = new Vector3(-15.5f, 3.0f, -10);
                 targetPos = new Vector3(-20.0f, 2.0f, -10);
+
+                currentPos = transform.position;
+                break;
+            case 6: // entrada de afuera al centro
+                transform.position = new Vector3(-9.5f, 0f, -10);
+                targetPos = new Vector3(-20.0f, 4.0f, -10);
 
                 currentPos = transform.position;
                 break;
