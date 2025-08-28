@@ -9,7 +9,7 @@ public class ShootBullets : MonoBehaviour
     private float timer;
 
     public int numberOfStreams = 5;
-    public float fireInterval = 0.5f;   
+    private float fireInterval;   
     public float angleOffset = -90.0f;
     private Coroutine FireCorutine;
 
@@ -38,6 +38,7 @@ public class ShootBullets : MonoBehaviour
 
     private IEnumerator FireLoop()
     {
+        fireInterval = 0.1f;
         while(true)
         {
             yield return StartCoroutine(Fire1(numberOfStreams));
@@ -46,6 +47,23 @@ public class ShootBullets : MonoBehaviour
     }
 
     private IEnumerator Fire1(int streams)
+    {
+        Vector2 direction = Vector2.down.normalized;
+        Vector2 perpendicular = new Vector2(-direction.y, direction.x);
+
+        float half = (streams - 1.0f) / 2.0f;
+
+        for(int i  = 0; i < streams; i++)
+        {
+            Vector2 temp = (Vector2)offset.position + perpendicular * ((i - half) * 0.5f);
+            Vector3 spawnPos = new Vector3(temp.x, temp.y, -10);
+            BulletController b = Instantiate(bulletObject, spawnPos, Quaternion.identity, this.transform);
+            b.direction = direction;
+            yield return null;
+        }
+    }
+
+    private IEnumerator Fire2(int streams)
     {
         float angleStep = 360.0f / streams;
 
@@ -60,4 +78,5 @@ public class ShootBullets : MonoBehaviour
             yield return null;            
         }
     }
+
 }
