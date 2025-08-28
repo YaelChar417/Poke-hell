@@ -25,12 +25,28 @@ public class ShootBullets : MonoBehaviour
 
     private void TimeCheck()
     {
-        if(TimeManager.Hour == 10 && TimeManager.Minute == 2)
+        if(isTime(10, 3))
         {
             FireCorutine = StartCoroutine(FireLoop());
-        }
-
-        if(TimeManager.Hour == 10 && TimeManager.Minute == 15)
+        } else if(isTime(10, 6))
+        {
+            StopCoroutine(FireCorutine);
+        } else if(isTime(10, 7))
+        {
+            FireCorutine = StartCoroutine(FireLoop());
+        } else if(isTime(10, 10))
+        {
+            StopCoroutine(FireCorutine);
+        } else if(isTime(10, 11))
+        {
+            FireCorutine = StartCoroutine(FireLoop());
+        } else if(isTime(10, 14))
+        {
+            StopCoroutine(FireCorutine);
+        } else if(isTime(10, 15))
+        {
+            FireCorutine = StartCoroutine(FireLoop());
+        } else if(isTime(10, 18))
         {
             StopCoroutine(FireCorutine);
         }
@@ -79,4 +95,8 @@ public class ShootBullets : MonoBehaviour
         }
     }
 
+    private bool isTime(int hour, int minute)
+    {
+        return (TimeManager.Hour == hour && TimeManager.Minute == minute);
+    }
 }

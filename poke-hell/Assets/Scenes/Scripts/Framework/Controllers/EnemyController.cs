@@ -18,13 +18,13 @@ public class EnemyController : MonoBehaviour
         if(isTime(10, 2))
         {
             StartCoroutine(MoveEnemy(4));
-        } else if(isTime(10, 8))
+        } else if(isTime(10, 6))
         {
             StartCoroutine(MoveEnemy(1));
-        } else if(isTime(10, 14))
+        } else if(isTime(10, 10))
         {
             StartCoroutine(MoveEnemy(2));
-        } else if(isTime(10, 20))
+        } else if(isTime(10, 14))
         {
             StartCoroutine(MoveEnemy(3));
         }
