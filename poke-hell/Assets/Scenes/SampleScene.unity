@@ -739,8 +739,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShootBullets
   bulletObject: {fileID: 4312904837572219972, guid: d71359582c028274eb2ce23e4cedb2c3, type: 3}
   offset: {fileID: 153220169}
-  numberOfStreams: 5
-  fireInterval: 0.5
   angleOffset: -90
 --- !u!1 &1376635565
 GameObject:
