@@ -7,7 +7,6 @@ public class ShootBullets : MonoBehaviour
     private float timer;
 
     public int numberOfStreams = 5;
-    private float radius = Constants.RADIUS;
     public float fireInterval = 0.5f;   
     public float angleOffset = -90.0f;
 
