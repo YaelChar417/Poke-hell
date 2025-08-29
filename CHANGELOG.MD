@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 -   Audios para efectos de sonido (2025-08-29).
+-   Audio de fondo reproduciendose automaticamente (2025-08-28).
+-   Audio cuando el enemigo lanza fuego (2025-08-29).
 
 ### Fixed
 
