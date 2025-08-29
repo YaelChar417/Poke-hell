@@ -7,7 +7,6 @@ using TMPro;
 /// Standar coding documentation can be found in 
 /// https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/documentation-comments
 /// </summary>
-
 public class TimeUI : MonoBehaviour
 {
     public TextMeshProUGUI timeText;
