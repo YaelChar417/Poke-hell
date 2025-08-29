@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ScenarioTrigger
   - BulletTrigger
+  - AudioManager
   layers:
   - Default
   - TransparentFX
