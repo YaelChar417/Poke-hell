@@ -7,10 +7,14 @@ public class BulletController : MonoBehaviour
     private float bulletLife = Constants.BULLET_LIFE;
     public Vector2 direction = Vector2.down;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void OnEnable()
     {
-        
+        BulletManager.Add();
+    }
+
+    void OnDisable()
+    {
+        BulletManager.Remove();
     }
 
     // Update is called once per frame
