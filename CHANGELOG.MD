@@ -5,6 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.2] - 2025-08-26
+
+### Added
+
+-   Patron de llamas lineales en fila (2025-08-28).
+-   1er patron terminado (2025-08-28).
+-   movimiento circular terminado (2025-08-28).
+-   2do patron terminado (2025-08-28).
+-   3er patron de barrido terminado (2025-08-28).
+
+### Fixed
+
+-   Logica de la función MoveEnemy en el controller para reducir lineas de codigo (2025-08-26).
+
+### Changed
+
+-   Corrutina del enemyController ahora hecha modular (2025-08-28).
+-   Mayor numero de fuego al 1er patron (2025-08-28).
+-   Estructura de condicionales para mejor legibilidad (2025-08-28).
+-   Condicional del ciclo for para mejor legibilidad (2025-08-28).
+
+### Removed
+
 ## [0.2.1] - 2025-08-26
 
 ### Added

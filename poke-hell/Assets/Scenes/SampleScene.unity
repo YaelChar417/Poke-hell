@@ -555,11 +555,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7857033505590066259, guid: 5c7b61930793ceb42a5a6a6f381115a8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.79
+      value: 10.54
       objectReference: {fileID: 0}
     - target: {fileID: 7857033505590066259, guid: 5c7b61930793ceb42a5a6a6f381115a8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.31
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7857033505590066259, guid: 5c7b61930793ceb42a5a6a6f381115a8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -739,8 +739,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShootBullets
   bulletObject: {fileID: 4312904837572219972, guid: d71359582c028274eb2ce23e4cedb2c3, type: 3}
   offset: {fileID: 153220169}
-  numberOfStreams: 5
-  fireInterval: 0.5
   angleOffset: -90
 --- !u!1 &1376635565
 GameObject:
