@@ -9,11 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+-   Audios para efectos de sonido (2025-08-29).
+
 ### Fixed
 
 ### Changed
 
 ### Removed
+
+-   Imagenes no utilizadas (2025-08-29).
 
 ## [0.3.0] - 2025-08-26
 
