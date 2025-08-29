@@ -12,7 +12,7 @@ public static class BulletManager
         onCountChanged?.Invoke(bulletNum);
     }
     
-    public static void Remove()
+    public static void Substract()
     {
         bulletNum = Mathf.Max(0, bulletNum - 1);
         onCountChanged?.Invoke(bulletNum);
