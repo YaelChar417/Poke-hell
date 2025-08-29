@@ -65,6 +65,14 @@ public class ShootBullets : MonoBehaviour
         {
             StopCoroutine(FireCorutine);
         }
+        else if(isTime(10, 36))
+        {
+            FireCorutine = StartCoroutine(FireLoop(3));
+        }
+        else if(isTime(10, 56))
+        {
+            StopCoroutine(FireCorutine);
+        }
     }
 
     private IEnumerator FireLoop(int opcion)
@@ -87,6 +95,14 @@ public class ShootBullets : MonoBehaviour
                 {
                     yield return StartCoroutine(Fire2(numberOfStreams));
                     yield return new WaitForSeconds(fireInterval);
+                }
+                break;
+            case 3:
+                fireInterval = 0.2f;
+                numberOfStreams = 3;
+                while(true)
+                {
+                    yield return StartCoroutine(Fire3(numberOfStreams, fireInterval));
                 }
                 break;
             default:
@@ -125,6 +141,35 @@ public class ShootBullets : MonoBehaviour
             BulletController b = Instantiate(bulletObject, offset.position, Quaternion.identity, this.transform);
             b.direction = direction;
             yield return null;            
+        }
+    }
+
+    private IEnumerator Fire3(int streams, float fireInterval)
+    {
+        float angle, radians; 
+        float timeToShoot = 10.0f;
+        float startAngle = -90.0f; 
+        float degreesPerSecond = 360.0f / timeToShoot;
+        float timeElapsed = 0f;
+        float half = (streams - 1.0f) / 2.0f;
+
+        while(timeElapsed < timeToShoot)
+        {
+            angle = startAngle + degreesPerSecond * timeElapsed;
+            radians = angle * Mathf.Deg2Rad;
+            Vector2 direction = new Vector2(Mathf.Cos(radians), Mathf.Sin(radians)).normalized;
+            Vector2 perpendicular = new Vector2 (-direction.y, direction.x);
+
+            for (int i = 0; i < streams; i++)
+            {
+                Vector2 temp = (Vector2)offset.position + perpendicular * ((i - half) * 0.5f);
+                Vector3 spawnPos = new Vector3(temp.x, temp.y, -10);
+                BulletController b = Instantiate(bulletObject, spawnPos, Quaternion.identity, this.transform);
+                b.direction = direction;
+            }
+
+            yield return new WaitForSeconds(fireInterval);
+            timeElapsed += fireInterval;
         }
     }
 

@@ -39,6 +39,10 @@ public class EnemyController : MonoBehaviour
         {
             StartCoroutine(RotateEnemy());
         }
+        else if(isTime(10, 58))
+        {
+            StartCoroutine(MoveEnemy(7));
+        }
     }
 
     private IEnumerator RotateEnemy()
@@ -101,6 +105,10 @@ public class EnemyController : MonoBehaviour
                 transform.position = new Vector3(-9.5f, 0f, -10);
                 targetPos = new Vector3(-20.0f, 4.0f, -10);
 
+                currentPos = transform.position;
+                break;
+            case 7:
+                targetPos = new Vector3(-30.5f, -4.0f, -10);
                 currentPos = transform.position;
                 break;
             default: 

@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   1er patron terminado (2025-08-28).
 -   movimiento circular terminado (2025-08-28).
 -   2do patron terminado (2025-08-28).
+-   3er patron de barrido terminado (2025-08-28).
 
 ### Fixed
 
