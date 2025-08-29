@@ -14,7 +14,7 @@ public class BulletController : MonoBehaviour
 
     void OnDisable()
     {
-        BulletManager.Remove();
+        BulletManager.Substract();
     }
 
     // Update is called once per frame

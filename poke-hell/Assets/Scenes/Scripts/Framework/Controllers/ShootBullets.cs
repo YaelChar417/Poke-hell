@@ -12,6 +12,12 @@ public class ShootBullets : MonoBehaviour
     private float fireInterval;   
     public float angleOffset = -90.0f;
     private Coroutine FireCorutine;
+    AudioManager audioManager;
+
+    public void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
 
     public void OnEnable()
     {
@@ -84,19 +90,19 @@ public class ShootBullets : MonoBehaviour
                 numberOfStreams = 9;
                 while(true)
                 {
+                    audioManager.PlaySound(audioManager.fireEffect);
                     yield return StartCoroutine(Fire1(numberOfStreams));
                     yield return new WaitForSeconds(fireInterval);
                 }
-                break;
             case 2:
                 fireInterval = 0.5f;
                 numberOfStreams = 10;
                 while(true)
                 {
+                    audioManager.PlaySound(audioManager.fireEffect);
                     yield return StartCoroutine(Fire2(numberOfStreams));
                     yield return new WaitForSeconds(fireInterval);
                 }
-                break;
             case 3:
                 fireInterval = 0.2f;
                 numberOfStreams = 3;
@@ -104,7 +110,6 @@ public class ShootBullets : MonoBehaviour
                 {
                     yield return StartCoroutine(Fire3(numberOfStreams, fireInterval));
                 }
-                break;
             default:
                 yield break;
         }
@@ -159,9 +164,11 @@ public class ShootBullets : MonoBehaviour
             radians = angle * Mathf.Deg2Rad;
             Vector2 direction = new Vector2(Mathf.Cos(radians), Mathf.Sin(radians)).normalized;
             Vector2 perpendicular = new Vector2 (-direction.y, direction.x);
-
+            audioManager.PlaySound(audioManager.fireEffect);
+            
             for (int i = 0; i < streams; i++)
             {
+                
                 Vector2 temp = (Vector2)offset.position + perpendicular * ((i - half) * 0.5f);
                 Vector3 spawnPos = new Vector3(temp.x, temp.y, -10);
                 BulletController b = Instantiate(bulletObject, spawnPos, Quaternion.identity, this.transform);
